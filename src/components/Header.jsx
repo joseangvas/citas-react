@@ -2,7 +2,12 @@ function Header() {
 
 
   return (
-    <h1 className="text-4xl font-bold uppercase text-indigo-600 mt-5">Desde Header</h1>
+    <>
+      <h1 className="font-black text-4xl text-center w-1/2 mx-auto">
+        Seguimiento Pacientes {''}
+        <span className="text-indigo-600">Veterinaria</span>
+      </h1>
+    </>
   )
 }
 
