@@ -56,7 +56,7 @@ const Formulario = ({pacientes, setPacientes}) => {
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
 
         {/* {error ? 'Si Hay un Error' : 'No Hay Error'} Ternario */}
-        { error && <Error /> }
+        { error && <Error mensaje = "Todos los Campos son Obligatorios" /> }
         <div className="mb-5">
           <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold">
             Nombre Mascota
