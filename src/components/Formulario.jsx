@@ -7,12 +7,15 @@ const Formulario = () => {
   const [fecha, setFecha] = useState('');
   const [sintomas, setSintomas] = useState('');
 
+  const [error, setError] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validación del Formulario
     if ([nombre, propietario, email, fecha, sintomas].includes('')) {
       console.log('Hay al menos un campo vacío');
+      setError(true);
     } else {
       console.log('Todos están llenos');
     }
@@ -31,6 +34,9 @@ const Formulario = () => {
       <form 
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+
+        {/* {error ? 'Si Hay un Error' : 'No Hay Error'} Ternario */}
+        {error && <div><p>Si Hay un Error</p></div>}
         <div className="mb-5">
           <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold">
             Nombre Mascota
@@ -99,14 +105,15 @@ const Formulario = () => {
             id="sintomas"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
             placeholder="Describe los Síntomas"
+            value={sintomas}
+            onChange={(e) => setSintomas(e.target.value)}
           />
         </div>
 
         <input
           type="submit"
           className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded-md transition-all"
-          value={sintomas}
-          onChange={(e) => setSintomas(e.target.value)}
+          value="Agregar Paciente"
         />
       </form>
     </div>
