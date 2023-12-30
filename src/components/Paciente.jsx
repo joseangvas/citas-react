@@ -26,4 +26,4 @@ const Paciente = () => {
   )
 }
 
-export default Paciente
+export default Paciente;
