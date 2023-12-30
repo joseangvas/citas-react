@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-const Formulario = () => {
+const Formulario = ({pacientes, setPacientes}) => {
   const [nombre, setNombre] = useState('');
   const [propietario, setPropietario] = useState('');
   const [email, setEmail] = useState('');
@@ -18,7 +18,27 @@ const Formulario = () => {
       return;
     }
 
+    // Resetear Estado de Error Anterior
     setError(false);
+
+    // Construir Objeto de Paciente
+    const objetoPaciente = {
+      nombre, 
+      propietario, 
+      email, 
+      fecha, 
+      sintomas
+    }
+
+    // Duplicar el Arreglo Original actualizado con Valores del Form
+    setPacientes([...pacientes, objetoPaciente]);
+
+    // Reiniciar el Formulario
+    setNombre('');
+    setPropietario('');
+    setEmail('');
+    setFecha('');
+    setSintomas('');
   }
 
   return (
@@ -35,11 +55,7 @@ const Formulario = () => {
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
 
         {/* {error ? 'Si Hay un Error' : 'No Hay Error'} Ternario */}
-        {error && 
-          <div className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3 rounded-md">
-            <p>Todos los Campos son Obligatorios</p>
-          </div>
-        }
+        {error &&  }
         <div className="mb-5">
           <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold">
             Nombre Mascota
