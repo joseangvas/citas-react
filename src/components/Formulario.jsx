@@ -14,12 +14,11 @@ const Formulario = () => {
 
     // Validación del Formulario
     if ([nombre, propietario, email, fecha, sintomas].includes('')) {
-      console.log('Hay al menos un campo vacío');
       setError(true);
-    } else {
-      console.log('Todos están llenos');
+      return;
     }
 
+    setError(false);
   }
 
   return (
@@ -36,7 +35,11 @@ const Formulario = () => {
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
 
         {/* {error ? 'Si Hay un Error' : 'No Hay Error'} Ternario */}
-        {error && <div><p>Si Hay un Error</p></div>}
+        {error && 
+          <div className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3 rounded-md">
+            <p>Todos los Campos son Obligatorios</p>
+          </div>
+        }
         <div className="mb-5">
           <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold">
             Nombre Mascota
