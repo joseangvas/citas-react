@@ -2,10 +2,11 @@ import {useState, useEffect} from 'react';
 
 const Formulario = () => {
   const [nombre, setNombre] = useState('');
+  const [propietario, setPropietario] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
   }
 
   return (
@@ -45,6 +46,8 @@ const Formulario = () => {
             type='text'
             placeholder="Nombre del Propietario"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            value={propietario}
+            onChange={(e) => setPropietario(e.target.value)}
           />
         </div>
 
