@@ -23,6 +23,10 @@ const Paciente = ({paciente}) => {
       <p className="font-bold mb-3 text-gray-700 uppercase">Síntomas: {''}
         <span className="font-normal normal-case">{sintomas}</span>
       </p>
+
+      <div>
+        
+      </div>
     </div>
   )
 }
