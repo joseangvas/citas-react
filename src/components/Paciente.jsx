@@ -1,4 +1,5 @@
 const Paciente = ({paciente, setPaciente}) => {
+
   // Aplicamos Destructuring
   const {nombre, propietario, email, fecha, sintomas} = paciente
 
