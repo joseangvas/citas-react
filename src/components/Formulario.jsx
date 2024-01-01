@@ -39,7 +39,7 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
     // Resetear Estado de Error Anterior
     setError(false);
 
-    // Construir Objeto de Paciente
+    // Construir Objeto de Paciente Nuevo
     const objetoPaciente = {
       nombre,
       propietario,
@@ -48,6 +48,13 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
       sintomas,
       id: generarId(),
     };
+
+    if (paciente.id)
+      // Editando el Registro {
+    } else {
+      // Nuevo Registro
+      
+    }
 
     // Duplicar el Arreglo Original actualizado con Valores del Form
     setPacientes([...pacientes, objetoPaciente]);
