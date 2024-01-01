@@ -45,15 +45,16 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
       propietario,
       email,
       fecha,
-      sintomas,
-      id: generarId(),
+      sintomas
     };
 
-    if (paciente.id)
-      // Editando el Registro {
+    if(paciente.id)
+      // Editando el Registro 
+
     } else {
       // Nuevo Registro
-      
+      objetoPaciente.id = generarId();
+      setPacientes([...pacientes, objetoPaciente]);
     }
 
     // Duplicar el Arreglo Original actualizado con Valores del Form
