@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from "react";
 import Estilos from "./components/Estilos";
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
@@ -14,19 +14,15 @@ function App() {
 
       <div className="mt-12 md:flex">
         <Formulario
-          pacientes = {pacientes}  // Asignar Props
-          setPacientes = {setPacientes}  // Asignar Props
-          paciente = {paciente}
+          pacientes={pacientes} // Asignar Props
+          setPacientes={setPacientes} // Asignar Props
+          paciente={paciente}
+          setPaciente={setPaciente} // Asignar Props
         />
-        <ListadoPacientes
-          pacientes = {pacientes}
-          setPaciente = {setPaciente}
-        />
-
+        <ListadoPacientes pacientes={pacientes} setPaciente={setPaciente} />
       </div>
-
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
