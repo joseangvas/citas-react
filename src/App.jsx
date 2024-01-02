@@ -23,7 +23,11 @@ function App() {
           paciente={paciente}
           setPaciente={setPaciente} // Asignar Props
         />
-        <ListadoPacientes pacientes={pacientes} setPaciente={setPaciente} />
+        <ListadoPacientes
+          pacientes={pacientes}
+          setPaciente={setPaciente}
+          eliminarPaciente={eliminarPaciente}
+        />
       </div>
     </div>
   );
