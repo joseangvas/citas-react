@@ -1,6 +1,9 @@
 const Paciente = ({ paciente, setPaciente, eliminarPaciente }) => {
   // Aplicamos Destructuring
   const { nombre, propietario, email, fecha, sintomas, id } = paciente;
+  const handleEliminar = () => {
+    
+  }
 
   return (
     <div className="mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl">
@@ -41,9 +44,7 @@ const Paciente = ({ paciente, setPaciente, eliminarPaciente }) => {
         <button
           type="button"
           className="py-2 px-10 bg-red-600 hover:bg-red-800 text-white font-bold uppercase rounded-lg"
-          onClick={() => {
-            eliminarPaciente(id);
-          }}
+          onClick={handleEliminar}
         >
           Eliminar
         </button>
