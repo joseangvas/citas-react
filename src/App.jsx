@@ -12,6 +12,7 @@ function App() {
     const pacientesActualizados = pacientes.filter(
       (paciente) => paciente.id !== id
     );
+    setPacientes(pacientesActualizados);
   };
 
   return (
