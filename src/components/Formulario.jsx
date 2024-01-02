@@ -45,26 +45,25 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
       propietario,
       email,
       fecha,
-      sintomas
+      sintomas,
     };
 
-    if(paciente.id)
-      // Editando el Registro 
+    if (paciente.id) {
+      // Editando el Registro
       objetoPaciente.id = paciente.id;
 
-      const pacientesActualizados = pacientes.map(pacienteState => pacientesState.id === paciente.id ? objetoPaciente : pacienteState);
+      const pacientesActualizados = pacientes.map((pacienteState) =>
+        pacienteState.id === paciente.id ? objetoPaciente : pacienteState
+      );
 
       setPacientes(pacientesActualizados);
       setPacientes({});
-
     } else {
       // Nuevo Registro
       objetoPaciente.id = generarId();
+      // Duplicar el Arreglo Original actualizado con Valores del Form
       setPacientes([...pacientes, objetoPaciente]);
     }
-
-    // Duplicar el Arreglo Original actualizado con Valores del Form
-    setPacientes([...pacientes, objetoPaciente]);
 
     // Reiniciar el Formulario
     setNombre("");
