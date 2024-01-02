@@ -2,7 +2,10 @@ const Paciente = ({ paciente, setPaciente, eliminarPaciente }) => {
   // Aplicamos Destructuring
   const { nombre, propietario, email, fecha, sintomas, id } = paciente;
   const handleEliminar = () => {
-    
+    const respuesta = confirm('Deseas Eliminar este Paciente');
+    if(respuesta) {
+      eliminarPaciente(id);
+    }
   }
 
   return (
