@@ -52,7 +52,7 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
       // Editando el Registro 
       objetoPaciente.id = paciente.id;
 
-      const pacientesActualizados = pacientes.map(pacienteState => pacientesState.id === paciente.id ? objetoPacientes : pacienteState);
+      const pacientesActualizados = pacientes.map(pacienteState => pacientesState.id === paciente.id ? objetoPaciente : pacienteState);
 
       setPacientes(pacientesActualizados);
       setPacientes({});
