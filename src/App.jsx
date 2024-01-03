@@ -13,6 +13,8 @@ function App() {
     const obtenerLS = () => {
       const pacientesLS = localStorage.getItem('pacientes');
     }
+
+    obtenerLS();
   }, []);
 
   useEffect(() => {
