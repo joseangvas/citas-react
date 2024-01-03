@@ -18,7 +18,8 @@ function App() {
 
   // Guardar el Paciente en LocalStorage
   useEffect(() => {
-    localStorage.setItem('pacientes', JSON.stringify(pacientes));  }, [pacientes]);
+    localStorage.setItem('pacientes', JSON.stringify(pacientes));
+  }, [pacientes]);
 
   const eliminarPaciente = id => {
     const pacientesActualizados = pacientes.filter(
