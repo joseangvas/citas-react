@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Estilos from "./components/Estilos";
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
 import ListadoPacientes from "./components/ListadoPacientes";
@@ -19,8 +18,7 @@ function App() {
 
   // Guardar el Paciente en LocalStorage
   useEffect(() => {
-    localStorage.setItem('pacientes', JSON.stringify(pacientes));
-  }, [pacientes]);
+    localStorage.setItem('pacientes', JSON.stringify(pacientes));  }, [pacientes]);
 
   const eliminarPaciente = id => {
     const pacientesActualizados = pacientes.filter(
