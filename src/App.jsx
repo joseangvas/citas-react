@@ -9,7 +9,7 @@ function App() {
   const [paciente, setPaciente] = useState({});
 
   useEffect(() => {
-    
+    localStorage.setItem('pacientes', JSON.stringify(pacientes));
   }, [pacientes]);
 
   const eliminarPaciente = id => {
