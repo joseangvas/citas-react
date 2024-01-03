@@ -11,7 +11,7 @@ function App() {
   // Obtener lo que haya en localStorage
   useEffect(() => {
     const obtenerLS = () => {
-      const pacientesLS = localStorage.getItem('pacientes');
+      const pacientesLS = JSON.parse(localStorage.getItem('pacientes')) ?? [];
     }
 
     obtenerLS();
