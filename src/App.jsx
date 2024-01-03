@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Estilos from "./components/Estilos";
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
