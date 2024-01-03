@@ -14,7 +14,6 @@ function App() {
       const pacientesLS = JSON.parse(localStorage.getItem('pacientes')) ?? [];
       setPacientes(pacientesLS);
     }
-
     obtenerLS();
   }, []);
 
@@ -45,7 +44,6 @@ function App() {
           pacientes={pacientes}
           setPaciente={setPaciente}
           eliminarPaciente={eliminarPaciente}
-          setPacientes={setPacientes}
         />
       </div>
     </div>
