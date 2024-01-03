@@ -8,8 +8,9 @@ function App() {
   const [pacientes, setPacientes] = useState([]);
   const [paciente, setPaciente] = useState({});
 
+  // Obtener lo que haya en localStorage
   useEffect(() => {
-    
+
   }, []);
 
   useEffect(() => {
