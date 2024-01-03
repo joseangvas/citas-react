@@ -10,7 +10,9 @@ function App() {
 
   // Obtener lo que haya en localStorage
   useEffect(() => {
-
+    const obtenerLS = () => {
+      
+    }
   }, []);
 
   useEffect(() => {
