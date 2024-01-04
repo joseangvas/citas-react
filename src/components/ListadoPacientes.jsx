@@ -7,11 +7,11 @@ const ListadoPacientes = ({pacientes, setPaciente, eliminarPaciente}) => {
         <>
           <h2 className="font-black text-3xl text-center">ListadoPacientes</h2>
           <p className="text-xl mt-5 mb-10 text-center">
-            Administra tus {""}
+            Administra tus {''}
             <span className="text-indigo-600 font-bold">Pacientes y Citas</span>
           </p>
 
-          {pacientes.map((paciente) => (
+          {pacientes.map(paciente => (
             <Paciente
               key={paciente.id}
               paciente={paciente}
@@ -32,7 +32,7 @@ const ListadoPacientes = ({pacientes, setPaciente, eliminarPaciente}) => {
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default ListadoPacientes;
