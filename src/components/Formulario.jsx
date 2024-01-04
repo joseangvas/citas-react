@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Error from "./Error";
 
-const Formulario = ({ pacientes, setPacientes, paciente }) => {
+const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   const [nombre, setNombre] = useState("");
   const [propietario, setPropietario] = useState("");
   const [email, setEmail] = useState("");
@@ -31,7 +31,7 @@ const Formulario = ({ pacientes, setPacientes, paciente }) => {
     e.preventDefault();
 
     // Validación del Formulario
-    if ([nombre, propietario, email, fecha, sintomas].includes("")) {
+    if ([nombre, propietario, email, fecha, sintomas].includes('')) {
       setError(true);
       return;
     }
