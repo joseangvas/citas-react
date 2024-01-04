@@ -190,4 +190,4 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   );
 };
 
-export default Formulario;
+export default Formulario
