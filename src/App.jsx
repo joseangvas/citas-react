@@ -22,9 +22,7 @@ function App() {
   }, [pacientes]);
 
   const eliminarPaciente = id => {
-    const pacientesActualizados = pacientes.filter(
-      (paciente) => paciente.id !== id
-    );
+    const pacientesActualizados = pacientes.filter((paciente) => paciente.id !== id);
     setPacientes(pacientesActualizados);
   };
 
