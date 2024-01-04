@@ -1,4 +1,4 @@
-const Paciente = ({ paciente, setPaciente, eliminarPaciente }) => {
+const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
   // Aplicamos Destructuring
   const { nombre, propietario, email, fecha, sintomas, id } = paciente;
   
@@ -58,4 +58,4 @@ const Paciente = ({ paciente, setPaciente, eliminarPaciente }) => {
   );
 };
 
-export default Paciente;
+export default Paciente
