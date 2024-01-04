@@ -77,7 +77,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
       <h2 className="font-black text-3xl text-center">Seguimiento Pacientes</h2>
 
       <p className="text-xl mt-5 text-center mb-10">
-        Añadir Pacientes y {""}
+        Añadir Pacientes y {''}
         <span className="text-indigo-600 font-bold">Administrarlos</span>
       </p>
 
